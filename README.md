@@ -78,7 +78,7 @@ Both apps integrate with a `json-server` API, ensuring seamless coordination bet
 ```
 root/
 ├── customer-app/
-│   ├── src/
+│   ├── screen/
 │   │   ├── LoginScreen.js
 │   │   ├── OTPScreen.js
 │   │   ├── DashboardScreen.js
@@ -90,7 +90,7 @@ root/
 │   ├── App.js
 │   ├── package.json
 ├── partner-app/
-│   ├── src/
+│   ├── screen/
 │   │   ├── LoginScreen.js
 │   │   ├── OTPScreen.js
 │   │   ├── DashboardScreen.js
