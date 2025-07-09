@@ -1,0 +1,63 @@
+{
+  "pickups": [
+    {
+      "id": "1",
+      "date": "2025-07-10",
+      "timeSlot": "10-11 AM",
+      "address": "123 Street",
+      "status": "Completed",
+      "items": []
+    },
+    {
+      "id": "eb01",
+      "date": "123456",
+      "timeSlot": "12",
+      "address": "dqwef",
+      "mapLink": "",
+      "status": "Completed"
+    },
+    {
+      "id": "3733",
+      "date": "372884",
+      "timeSlot": "10",
+      "address": "Fhidsbdjd",
+      "mapLink": "",
+      "status": "In Queue"
+    },
+    {
+      "id": "5aa1",
+      "date": "2025-07-08",
+      "timeSlot": "6:08 pm",
+      "address": "123 Main Street, City",
+      "status": "In Queue"
+    },
+    {
+      "id": "264b",
+      "date": "2004-03-01",
+      "timeSlot": "10:10",
+      "address": "123 Main Street, City",
+      "status": "Pending"
+    },
+    {
+      "id": "f96a",
+      "date": "2025-07-08",
+      "timeSlot": "4:26 pm",
+      "address": "123 Main Street, City",
+      "status": "In Queue"
+    },
+    {
+      "id": "d9fb",
+      "date": "2025-07-09",
+      "timeSlot": "4:01 pm",
+      "address": "123 Main Street, City",
+      "status": "In Queue"
+    },
+    {
+      "id": "e0bd",
+      "date": "2025-07-09",
+      "timeSlot": "4:21 pm",
+      "address": "123 Main Street, City",
+      "status": "Pending"
+    }
+  ]
+}
