@@ -1,129 +1,192 @@
-# EpiCircle React Native Assignment
+🌱 EpiCircle React Native Assignment
 
-A React Native project for EpiCircle's internship assignment, consisting of two separate apps:
+A React Native project developed for the EpiCircle internship assignment, showcasing two mobile applications designed to support sustainable waste management:
 
-- **Customer App** – for users to schedule scrap pickups and view their order history.
-- **Partner App** – for partners to accept pickup requests, manage pickups, and track order history.
+Customer App: Enables users to schedule scrap pickups and track their order history.
+Partner App: Allows partners to accept, manage, and track pickup requests.
 
----
+This project demonstrates my proficiency in React Native, Expo, API integration, and user-centric UI/UX design, aligning with EpiCircle's mission to promote eco-friendly solutions.
 
-## ✨ Features
+📖 Table of Contents
 
-### Customer App
-✅ User Login with OTP flow  
-✅ Schedule Pickup (Date, Time, Address, Live Location)  
-✅ Order History with status tracking  
-✅ Dark/Light Theme toggle  
-✅ Modern UI with animations
+Project Overview
+Features
+Tech Stack
+Repository Structure
+Prerequisites
+Setup Instructions
+Database Structure
+Notes
+Video Walkthrough
+Contact
+License
 
-### Partner App
-✅ Login with OTP flow  
-✅ Dashboard with stats and theme toggle  
-✅ View and accept pending pickup requests  
-✅ View completed pickup history  
-✅ Clean, responsive UI with brand colors
 
----
+🌟 Project Overview
+The EpiCircle React Native Assignment consists of two apps built to streamline waste collection:
 
-## 📂 Repo Structure
+Customer App: Empowers users to schedule scrap pickups with date, time, and location details, view their pickup history, and toggle between light/dark themes for accessibility.
+Partner App: Equips partners with tools to view and accept pending pickup requests, schedule new pickups, track completed orders, and monitor performance via a dashboard.
 
-root/
-customer-app/
-partner-app/
-db.json
-README.md
+Both apps integrate with a json-server API, ensuring seamless coordination between customers and partners. The project highlights my skills in mobile development, API integration, and modern UI/UX design, developed under a tight deadline to meet EpiCircle’s internship requirements.
 
-yaml
-Copy
-Edit
-
----
-
-## 🛠️ Prerequisites
-
-- Node.js (recommended ≥ 16.x)
-- npm
-- Expo CLI:
-
-```bash
-npm install -g expo-cli
-json-server:
-
-bash
-Copy
-Edit
-npm install -g json-server
-⚡️ Quick Start Guide
-1️⃣ Clone the repository
-bash
-Copy
-Edit
-git clone <your-repo-url>
-cd <repo-name>
-2️⃣ Install Dependencies for Both Apps
+✨ Features
 Customer App
-bash
-Copy
-Edit
-cd customer-app
-npm install
+
+✅ Login with OTP: Secure phone-based authentication with a smooth OTP input flow.
+✅ Schedule Pickup: Select date, time, and address, with live location support (assumed).
+✅ Order History: Track past pickups with status updates (Pending, Completed).
+✅ Dark/Light Theme: Toggle themes for enhanced accessibility and user comfort.
+✅ Modern UI: Animated cards, consistent styling, and eco-friendly branding.
+
 Partner App
-bash
-Copy
-Edit
-cd ../partner-app
+
+✅ Login with OTP: Secure and user-friendly authentication.
+✅ Dashboard: Displays today’s pickups, earnings, and a theme toggle button.
+✅ View Requests: Accept pending pickup requests with toast notifications.
+✅ Schedule Pickup: Create new pickup requests with date and location inputs.
+✅ Order History: Review completed pickups with a fallback for empty states.
+✅ Responsive Design: Card-based UI with animations and dark mode support.
+
+
+🛠️ Tech Stack
+
+Frontend: React Native v0.74.5, Expo v51.0.0
+Navigation: @react-navigation/native, @react-navigation/stack
+API Integration: axios for RESTful API calls
+Animations: react-native-animatable, lottie-react-native
+Icons: @expo/vector-icons
+State Management: React Hooks, Context API (ThemeContext)
+Storage: @react-native-async-storage/async-storage
+Backend: json-server for mock REST API
+Development Tools: Node.js v20.x, npm, Android Studio (emulator)
+
+
+📂 Repository Structure
+root/
+├── customer-app/
+│   ├── src/
+│   │   ├── LoginScreen.js
+│   │   ├── OTPScreen.js
+│   │   ├── DashboardScreen.js
+│   │   ├── SchedulePickupScreen.js
+│   │   ├── ViewHistoryScreen.js
+│   │   ├── ThemeContext.js
+│   ├── assets/
+│   │   ├── loader.json
+│   ├── App.js
+│   ├── package.json
+├── partner-app/
+│   ├── src/
+│   │   ├── LoginScreen.js
+│   │   ├── OTPScreen.js
+│   │   ├── DashboardScreen.js
+│   │   ├── SchedulePickupScreen.js
+│   │   ├── ViewHistoryScreen.js
+│   │   ├── ViewRequestsScreen.js
+│   │   ├── ThemeContext.js
+│   ├── assets/
+│   │   ├── loader.json
+│   ├── App.js
+│   ├── package.json
+├── db.json
+├── README.md
+
+
+🔧 Prerequisites
+
+Node.js: ≥ 16.x (20.x recommended)
+npm: Included with Node.js
+Expo CLI: For running React Native apps
+json-server: For mock API
+Android Studio: For Android emulator (optional)
+Screen Recorder: Kazam or OBS Studio for video demo
+Git: For cloning the repository
+
+Install prerequisites on Linux (Ubuntu):
+# Install Node.js via nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 20
+nvm use 20
+
+# Install Expo CLI and json-server
+npm install -g expo-cli json-server
+
+# Install Android Studio
+sudo snap install android-studio --classic
+
+# Install Kazam
+sudo apt update
+sudo apt install kazam
+
+
+🚀 Setup Instructions
+
+Clone the Repository:
+git clone https://github.com/mohit-kumawat/epicircle-assignment.git
+cd epicircle-assignment
+
+
+Install Dependencies:
+
+Customer App:cd customer-app
 npm install
-3️⃣ Setup and Start JSON Server
-From the root of the repo:
 
-bash
-Copy
-Edit
-json-server --watch db.json --port 3000
-✅ This will start the fake REST API at:
 
-arduino
-Copy
-Edit
-http://localhost:3000
-Example endpoint:
+Partner App:cd ../partner-app
+npm install
 
-bash
-Copy
-Edit
-http://localhost:3000/pickups
-4️⃣ Start the Customer App
-In a new terminal tab:
 
-bash
-Copy
-Edit
-cd customer-app
-npx expo start
-Choose to run on Web, Android Emulator, or Expo Go on your device.
 
-For web, you can also run:
 
-bash
-Copy
-Edit
-npx expo start --web
-5️⃣ Start the Partner App
-In another terminal tab:
+Configure Android SDK (Linux):
 
-bash
-Copy
-Edit
-cd partner-app
-npx expo start
-✅ Similarly, choose Android, iOS, Web, or Expo Go.
+Open Android Studio, go to Settings → Android SDK, and install SDK Platform (API 33).
+Set environment variables:nano ~/.bashrc
 
-🗂️ Database Structure Example
-Example db.json:
+Add:export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator
 
-json
-Copy
-Edit
+Apply:source ~/.bashrc
+
+
+
+
+Start JSON Server:
+
+In the root directory:json-server --watch db.json --host <your-local-ip> --port 3000
+
+
+Find your IP:ip addr show
+
+
+Update API_URL in ViewRequestsScreen.js, ViewHistoryScreen.js, and SchedulePickupScreen.js to <your-local-ip>:3000/pickups.
+
+
+
+
+Run the Customer App:
+
+In a new terminal:cd customer-app
+npx expo start --clear
+
+
+Press a for Android emulator, i for iOS simulator, or scan the QR code with Expo Go on a device.
+
+
+Run the Partner App:
+
+In another terminal:cd ../partner-app
+npx expo start --clear
+
+
+Run as above.
+
+
+
+
+🗄️ Database Structure
+db.json example:
 {
   "pickups": [
     {
@@ -132,36 +195,48 @@ Edit
       "timeSlot": "2:00 PM",
       "address": "123 Green Street",
       "status": "Pending"
+    },
+    {
+      "id": 2,
+      "date": "2025-07-09",
+      "timeSlot": "10:00 AM",
+      "address": "456 Oak Avenue",
+      "status": "Completed"
     }
   ]
 }
-✅ Status transitions:
 
-Customer creates → Pending
+Status Workflow:
 
-Partner accepts → In Queue
+Customer: Creates pickup → Pending
+Partner: Accepts pickup → In Queue
+Partner: Completes pickup → Pending for Approval
+Customer: Approves → Completed
 
-Partner completes → Pending for Approval
 
-Customer approves → Completed
+📝 Notes
 
-⚙️ Notes
-Ensure your local IP is used in API URLs in both apps so devices on your network can connect to json-server.
+Local IP: Replace 192.168.223.239 with your machine’s IP in API URLs to ensure connectivity.
+Expo Go: Ensure your device and PC are on the same Wi-Fi network.
+Dark Mode: Toggle themes via the dashboard in both apps.
+Emulator Issues: If the Android emulator fails, verify ANDROID_HOME and restart adb:adb kill-server
+adb start-server
 
-If you use Expo Go, make sure your PC and phone are on the same Wi-Fi network.
 
-For dark/light themes, both apps support toggling from their respective Dashboards.
+Dependencies: Clear Metro cache if errors occur:npx expo start --clear
 
-📹 Video Walkthrough
-Add your Google Drive or YouTube link here once recorded.
 
-🤝 Contact
-For questions about this project:
 
-Mohit Kumawat
 
-mohit.kumawat23b@iiitg.ac.in
+🎥 Video Walkthrough
+[Video link to be added after recording]
+A demo video showcasing both apps’ features, including login, OTP verification, dashboard navigation, pickup scheduling, request acceptance, and order history, will be uploaded to Google Drive or YouTube.
 
-yaml
-Copy
-Edit
+📧 Contact
+For questions or feedback:
+Mohit Kumawat📧 mohit.kumawat23b@iiitg.ac.in🌐 GitHub Profile🔗 LinkedIn Profile (Update with your actual link)
+
+📜 License
+This project is licensed under the MIT License.
+
+Developed with 💚 for EpiCircle’s mission to create a sustainable future.
