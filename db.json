@@ -58,6 +58,20 @@
       "timeSlot": "4:21 pm",
       "address": "123 Main Street, City",
       "status": "Pending"
+    },
+    {
+      "id": "c203",
+      "date": "2025-07-10",
+      "timeSlot": "5:05 pm",
+      "address": "123 Main Street, City",
+      "status": "Pending"
+    },
+    {
+      "id": "fdfd",
+      "date": "2025-07-10",
+      "timeSlot": "5:32 pm",
+      "address": "123 Main Street, City",
+      "status": "In Queue"
     }
   ]
 }
